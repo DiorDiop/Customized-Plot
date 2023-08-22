@@ -1,0 +1,19 @@
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate some sample data
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+# Creating a plot with customizations
+plt.figure(figsize=(8, 6))  # Set figure size
+plt.plot(x, y, color='blue', linestyle='--', label='Sine Curve')
+plt.title('Customized Sine Curve Plot')
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.legend(loc='upper right')
+plt.grid(True)
+plt.xticks(np.arange(0, 11, 2))  # Custom x-axis tick positions
+plt.yticks([-1, 0, 1], ['Low', 'Mid', 'High'])  # Custom y-axis tick labels
+plt.tight_layout()  # Adjust spacing
+plt.show()
